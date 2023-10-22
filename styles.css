@@ -1,2 +1,20 @@
+#gameContainer {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(40, 1fr);
+}
 
-/* Your CSS Code here. */
+.food {
+    background-color: red;
+}
+
+.snakeBodyPixel {
+    background-color: green;
+}
+
+.scoreBoard {
+    text-align: center;
+    font-size: 20px;
+}
