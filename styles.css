@@ -1,33 +1,4 @@
-[12:15 PM, 10/30/2023] 🩵S🩵: //your code here
-// GAME_PIXEL_COUNT is the pixels on horizontal or vertical axis of the game board (SQUARE).
-const GAME_PIXEL_COUNT = 40;
-const SQUARE_OF_GAME_PIXEL_COUNT = Math.pow(GAME_PIXEL_COUNT, 2);
 
-
-let changedTheDirOnce = false;
-let totalFoodAte = 0;
-let totalDistanceTravelled = 0;
-
-
-/// THE GAME BOARD:
-const gameContainer = document.getElementById("gameContainer");
-
-
-const createGameBoardPixels = () => {
- // Populate the [#gameContainer] div with small div's representing game pixels
- let a = ""
- for (let i = 1; i <= SQUARE_OF_GAME_PIXEL_COUNT; ++i) {
- a += `<div class="gameBoardPixel" id="pixel${i}"></div>`;
- }
- gameContainer.innerHTML = a;
-};
-
-
-const gameBoardPixels = document.getElementsByClassName("gameBoardPixel");
-
-
-let currentFoodPostion = 0;…
-[12:15 PM, 10/30/2023] 🩵S🩵: /* GAME BOARD STYLES */
 #gameContainer {
     /*
     width and height of .gameBoardPixel should 1/40 of the width and height of #gameContainer,
