@@ -1,36 +1,28 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-	<div id="gameContainer"></div>
+    <div id="gameContainer">
+        <!-- Game Board -->
+        <div id="gameBoard">
+            <!-- 40x40 grid -->
+            <?php for ($i = 0; $i < 40; $i++) { ?>
+                <?php for ($j = 0; $j < 40; $j++) { ?>
+                    <div id="pixel<?= $i * 40 + $j ?>"></div>
+                <?php } ?>
+            <?php } ?>
+        </div>
+        <!-- Score Board -->
+        <div class="scoreBoard">
+            <p>Score: <span id="score">0</span></p>
+        </div>
+    </div>
 
-
-	<!-- #scoreContainer contains the scores -->
-	<div id="scoreContainer">
-		<div class="scoreBoard">Your Score: <span id="pointsEarned">0</span></div>
-	</div>
-
-
-	<!-- #onScreenControllers contains the navigation buttons for mobile screens -->
-	<div id="onScreenControllers">
-		<button id="leftButton">◀️</button>
-		<div>
-			<button id="upButton">🔼</button>
-			<button id="downButton">🔽</button>
-		</div>
-		<button id="rightButton">▶️</button>
-	</div>
-
-
-	<script type="text/javascript" src="./script.js">
-	</script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
